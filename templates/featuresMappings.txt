@@ -39,8 +39,6 @@ tBodyGyroMag-mean();time.domain.body.gyromag.mean.value;Mean value of the time d
 tBodyGyroMag-std();time.domain.body.gyromag.standard.deviation;Mean value of the time domain signals of the magnitude of the body gyroscope angular velocity vector signal standard deviation in radians/second
 tBodyGyroJerkMag-mean();time.domain.body.gyroscope.jerk.magnitude.mean.value;Mean value of the time domain signals of the magnitude of the body Jerk gyroscope angular velocity vector signal mean value in radians/second
 tBodyGyroJerkMag-std();time.domain.body.gyroscope.jerk.magnitude.standard.deviation;Mean value of the time domain signals of the magnitude of the body Jerk gyroscope angular velocity vector signal standard deviation value in radians/second
-
-
 fBodyAcc-mean()-X;frequency.domain.body.accelerometer.mean.value.x;Mean value of the frequency domain signals of the body acceleration signal mean value in X direction in standard gravity units 'g'
 fBodyAcc-mean()-Y;frequency.domain.body.accelerometer.mean.value.y;Mean value of the frequency domain signals of the body acceleration signal mean value in Y direction in standard gravity units 'g'
 fBodyAcc-mean()-Z;frequency.domain.body.accelerometer.mean.value.z;Mean value of the frequency domain signals of the body acceleration signal mean value in Z direction in standard gravity units 'g'

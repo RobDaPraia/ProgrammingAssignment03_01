@@ -4,8 +4,7 @@
 <!---/Template warning-->
 
 ---
-title: "Codebook"
-output: html_document
+#Codebook.md
 ---
 
 Codebook for the programming assignment Coursera course Getting and Cleaning Data

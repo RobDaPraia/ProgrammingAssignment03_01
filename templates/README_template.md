@@ -3,9 +3,9 @@
 #### <span style="color:red">The code in run_analysis.R will insert the created date time</span>
 <!---/Template warning-->
 
+
 ---
-title: "README"
-output: html_document
+#README.md
 ---
 
 

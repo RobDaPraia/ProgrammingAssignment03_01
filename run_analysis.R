@@ -257,7 +257,6 @@ if (!featuresMappingsFilename %in% list.files(templatesUrl)) {
     featuresMappingsData <- FindReplace(data = featuresMappingsData, Var = "feature.descriptive"
                                         , replaceData = featuresRegexData, from = "find", to = "replace.with"
                                         , exact = FALSE)
-    featuresMappingsData
     
     ## Create the basic template features mapping file, you can edit this file later with text editor if needed
     write.table(featuresMappingsData, file =featuresMappingsUrl

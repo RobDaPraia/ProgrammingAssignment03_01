@@ -5,3 +5,10 @@ getdata-projectfiles-UCI HAR Dataset.zip
 UCI HAR Dataset
 Codebook.html
 README.html
+X_test.txt
+activity_labels.txt
+features.txt
+subject_test.txt
+subject_train.txt
+y_test.txt
+y_train.txt

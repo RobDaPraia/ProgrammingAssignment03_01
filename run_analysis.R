@@ -35,16 +35,27 @@ library(DataCombine)    ## needed for the replace function, install.packages("Da
 smartphoneDatasetWebsiteUrl <- "http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones"
 dataFileUrl <- "http://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 dataDestinationZipfile <- "./getdata-projectfiles-UCI HAR Dataset.zip"
-trainingSetUrl <- "./UCI HAR Dataset/train/X_train.txt"
-trainingActivitySetUrl <- "./UCI HAR Dataset/train/y_train.txt"
-trainingSubjectSetUrl <- "./UCI HAR Dataset/train/subject_train.txt"
 
-testSetUrl <- "./UCI HAR Dataset/test/X_test.txt"
-testActivitySetUrl <- "./UCI HAR Dataset/test/y_test.txt"
-testSubjectSetUrl <- "./UCI HAR Dataset/test/subject_test.txt"
+trainingSetSourceUrl <- "./UCI HAR Dataset/train/X_train.txt"
+trainingActivitySetSourceUrl <- "./UCI HAR Dataset/train/y_train.txt"
+trainingSubjectSetSourceUrl <- "./UCI HAR Dataset/train/subject_train.txt"
+testSetSourceUrl <- "./UCI HAR Dataset/test/X_test.txt"
+testActivitySetSourceUrl <- "./UCI HAR Dataset/test/y_test.txt"
+testSubjectSetSourceUrl <- "./UCI HAR Dataset/test/subject_test.txt"
+featuresSourceUrl <- "./UCI HAR Dataset/features.txt"
+activityLabelsSourceUrl <- "./UCI HAR Dataset/activity_labels.txt"
+
+
+trainingSetUrl <- "/.X_train.txt"
+trainingActivitySetUrl <- "./y_train.txt"
+trainingSubjectSetUrl <- "./subject_train.txt"
+
+testSetUrl <- "./X_test.txt"
+testActivitySetUrl <- "./y_test.txt"
+testSubjectSetUrl <- "./subject_test.txt"
 
 templatesUrl <- "./templates/"
-featuresUrl <- "./UCI HAR Dataset/features.txt"
+featuresUrl <- "./features.txt"
 featuresMappingsFilename <- "featuresMappings.txt"
 featuresMappingsUrl <-  paste0(templatesUrl, featuresMappingsFilename)
 featuresRegexFilename <-   "featuresRegex.txt"
@@ -58,7 +69,7 @@ readmeTemplateFilename <- "README_template.md"
 readmeTemplateUrl <-  paste0(templatesUrl, codebookTemplateFilename)
 
 
-activityLabelsUrl <- "./UCI HAR Dataset/activity_labels.txt"
+activityLabelsUrl <- "./activity_labels.txt"
 
 subjectVariableName <- "subject.id"
 activityVariableName <- "activity.id"
@@ -102,6 +113,25 @@ if (!"getdata-projectfiles-UCI HAR Dataset.zip" %in% list.files("./")) {
 if (!"UCI HAR Dataset" %in% list.files("./")) {
     unzip (dataDestinationZipfile, exdir = ".")
 } 
+
+## now copy the data filesfiles to the working directory
+## Normally, would not do this, but seems to be a requirement in the assignment
+## to be able to read the data files from working directory.
+##
+## QUOTE 
+## The code should have a file run_analysis.R in the main directory 
+## that can be run as long as the Samsung data is in your working directory.
+## UNQUOTE
+
+
+file.copy(trainingSetSourceUrl, trainingSetUrl)
+file.copy(trainingActivitySetSourceUrl, trainingActivitySetUrl)
+file.copy(trainingSubjectSetSourceUrl, trainingSubjectSetUrl)
+file.copy(testSetSourceUrl, testSetUrl)
+file.copy(testActivitySetSourceUrl, testActivitySetUrl)
+file.copy(testSubjectSetSourceUrl, testSubjectSetUrl)
+file.copy(featuresSourceUrl, featuresUrl)
+file.copy(activityLabelsSourceUrl, activityLabelsUrl)
 
 
 ###########################################################################
